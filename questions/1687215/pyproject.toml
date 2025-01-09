@@ -1,0 +1,72 @@
+[project]
+name = "hackerrank-1687215"
+version = "0.1.0"
+description = "Do They Belong?"
+authors = [
+    {name = "misut",email = "pkr5207@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13,<4"
+dependencies = [
+]
+
+[tool.poetry]
+packages = [{include = "src/python"}]
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.10.0"
+isort = "^5.13.2"
+mypy = "^1.14.1"
+pycln = "^2.5.0"
+ruff = "^0.9.0"
+
+[tool.isort]
+profile = "black"
+src_paths = ["src"]
+
+[tool.mypy]
+incremental = true
+plugins = []
+pretty = true
+strict = true
+
+[tool.poe.tasks]
+_pycln = "pycln src"
+_black = "black src"
+_isort = "isort src"
+format = ["_pycln", "_black", "_isort"]
+
+_ruff = "ruff check --fix src"
+lint = ["_ruff"]
+
+fix = ["format", "lint"]
+
+_pycln_check = "pycln --check src"
+_black_check = "black --check src"
+_isort_check = "isort --check-only src"
+format-check = ["_pycln_check", "_black_check", "_isort_check"]
+
+_ruff-check = "ruff check src"
+lint-check = ["_ruff-check"]
+
+_mypy = "mypy src"
+typetest = ["_mypy"]
+
+check = ["format-check", "lint-check", "typetest"]
+
+[tool.ruff.lint]
+ignore = [
+    "E501",
+    "I001",
+]
+select = [
+    "F",
+    "E",
+    "W",
+    "I",
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
