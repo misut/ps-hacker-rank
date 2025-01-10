@@ -11,7 +11,7 @@ dependencies = [
 ]
 
 [tool.poetry]
-packages = [{include = "src/python"}]
+packages = [{include = "src"}]
 
 
 [tool.poetry.group.dev.dependencies]
