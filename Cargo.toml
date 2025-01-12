@@ -1,7 +1,2 @@
 [workspace]
 members = ["questions/**/rs"]
-
-[package]
-name = "ps-hacker-rank"
-version = "0.1.0"
-description = "Repository for Problem Solving in Hacker Rank"
