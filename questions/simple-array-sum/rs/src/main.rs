@@ -1,6 +1,7 @@
 use std::env;
 use std::fs::File;
 use std::io::{self, BufRead, Write};
+use std::iter::Sum;
 
 /*
  * Complete the 'simpleArraySum' function below.
@@ -9,8 +10,9 @@ use std::io::{self, BufRead, Write};
  * The function accepts INTEGER_ARRAY ar as parameter.
  */
 
+#[allow(non_snake_case)]
 fn simpleArraySum(ar: &[i32]) -> i32 {
-    1
+    Sum::sum(ar.iter())
 }
 
 fn main() {
