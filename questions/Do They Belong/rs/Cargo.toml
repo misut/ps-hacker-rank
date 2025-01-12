@@ -1,7 +1,0 @@
-[package]
-name = "hackerrank-1687215"
-version = "0.1.0"
-edition = "2021"
-description = "Do They Belong?"
-
-[dependencies]

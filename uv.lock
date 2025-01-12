@@ -1,0 +1,18 @@
+version = 1
+requires-python = ">=3.13, <4"
+
+[manifest]
+members = [
+    "ps-hacker-rank",
+    "simple-array-sum",
+]
+
+[[package]]
+name = "ps-hacker-rank"
+version = "0.1.0"
+source = { virtual = "." }
+
+[[package]]
+name = "simple-array-sum"
+version = "0.1.0"
+source = { virtual = "questions/simple-array-sum/py" }
