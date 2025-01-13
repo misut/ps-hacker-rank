@@ -12,6 +12,7 @@ use std::iter::zip;
  *  2. INTEGER_ARRAY b
  */
 
+#[allow(non_snake_case)]
 fn compareTriplets(a: &[i32], b: &[i32]) -> Vec<i32> {
     let mut alice = 0;
     let mut bob = 0;
