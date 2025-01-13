@@ -1,7 +1,7 @@
 [project]
 name = "simple-array-sum"
 version = "0.1.0"
-description = "Simple Array Sum
+description = "Simple Array Sum"
 readme = "README.md"
 requires-python = ">=3.13, <4"
 dependencies = []
