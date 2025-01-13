@@ -11,4 +11,4 @@ dependencies = [
 ]
 
 [tool.uv.workspace]
-members = ["questions/**/py"]
+members = ["questions/**/py", "questions/compare-the-triplets/py"]
