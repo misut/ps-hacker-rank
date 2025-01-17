@@ -1,0 +1,6 @@
+[package]
+name = "detect-whether-a-linked-list-contains-a-cycle"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
