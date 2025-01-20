@@ -16,7 +16,6 @@ use std::io::{self, BufRead, Write};
 fn climbingLeaderboard(ranked: &[i32], player: &[i32]) -> Vec<i32> {
     let mut deduped_ranked = ranked.to_vec();
     deduped_ranked.dedup();
-    println!("{deduped_ranked:?}");
 
     let mut current_rank = 0;
     player
@@ -26,7 +25,6 @@ fn climbingLeaderboard(ranked: &[i32], player: &[i32]) -> Vec<i32> {
             while score < &deduped_ranked.get(current_rank).unwrap_or(&MIN) {
                 current_rank += 1;
             }
-            println!("{score} {current_rank}");
             current_rank as i32 + 1
         })
         .collect::<Vec<i32>>()
