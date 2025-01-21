@@ -5,6 +5,7 @@ use std::fs::File;
 use std::io::{self, BufRead, Write};
 use std::rc::{Rc, Weak};
 
+#[allow(dead_code)]
 struct Node {
     value: i32,
     next: Option<Rc<RefCell<Node>>>,
@@ -71,7 +72,7 @@ fn main() {
 
     let mut fptr = File::create(env::var("OUTPUT_PATH").unwrap()).unwrap();
 
-    let mut tests = stdin_iterator
+    let tests = stdin_iterator
         .next()
         .unwrap()
         .unwrap()
